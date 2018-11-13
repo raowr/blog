@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `beego_blog` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `beego_blog`;
+CREATE DATABASE  IF NOT EXISTS `blog` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `blog`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
 -- Host: doubleliu.com    Database: beego_blog
