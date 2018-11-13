@@ -1,8 +1,8 @@
 package admin
 
 import (
+	"blog/models"
 	"fmt"
-	"github.com/jxufeliujj/blog/models"
 	"os"
 	"strings"
 	"time"
@@ -104,5 +104,5 @@ func (this *PhotoController) UploadPhoto() {
 	albumid, _ := this.GetInt64("albumid")
 	this.Insert(albumid, header.Filename, out["url"])
 	this.Data["json"] = out
-	this.ServeJson()
+	this.ServeJSON()
 }

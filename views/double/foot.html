@@ -1,6 +1,10 @@
 <footer>
-	<p>Design by Double &copy;2014 	
+	<p>Design by Double &copy;2014
+        {{if .options.stat}}
 		{{str2html .options.stat}}
+		{{else}}
+		tody
+        {{end}}
 	</p>
 </footer>
 

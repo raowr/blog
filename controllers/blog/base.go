@@ -1,8 +1,8 @@
 package blog
 
 import (
+	"blog/models"
 	"github.com/astaxie/beego"
-	"github.com/jxufeliujj/blog/models"
 	"strconv"
 	"strings"
 )
@@ -44,14 +44,14 @@ func (this *baseController) Prepare() {
 }
 
 func (this *baseController) display(tpl string) {
-	theme := "default"
+	theme := "double"
 	if v, ok := this.options["theme"]; ok && v != "" {
 		theme = v
 	}
 
 	this.Layout = theme + "/layout.html"
-	this.Data["root"] = "/" + beego.ViewsPath + "/" + theme + "/"
-	this.TplNames = theme + "/" + tpl + ".html"
+	this.Data["root"] = "/" + beego.AppConfig.String("ViewsPath") + "/" + theme + "/"
+	this.TplName = theme + "/" + tpl + ".html"
 
 	this.LayoutSections = make(map[string]string)
 	this.LayoutSections["head"] = theme + "/head.html"

@@ -1,7 +1,7 @@
 package admin
 
 import (
-	"github.com/jxufeliujj/blog/models"
+	"blog/models"
 	"strconv"
 	"strings"
 )
@@ -39,7 +39,7 @@ func (this *AccountController) Login() {
 			}
 		}
 	}
-	this.TplNames = "admin/account_login.html"
+	this.TplName = "admin/account_login.html"
 }
 
 //退出登录

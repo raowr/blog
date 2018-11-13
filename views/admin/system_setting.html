@@ -84,6 +84,7 @@
 			<tr>
 				<th>时区设置</th>
 				<td>
+					{{if .options.timezone}}
 					<select name="timezone">
 					<option value="-12" {{if eq .options.timezone "-12"}}selected{{end}}>(标准时-12:00) 日界线西</option>
 					<option value="-11" {{if eq .options.timezone "-11"}}selected{{end}}>(标准时-11:00) 中途岛、萨摩亚群岛</option>
@@ -117,6 +118,7 @@
 					<option value="12" {{if eq .options.timezone "12"}}selected{{end}}>(标准时+12:00) 奥克兰、惠灵顿、堪察加半岛</option>
 					</select>
 					<span>当前UTC时间：{{date .now "Y-m-d H:i:s"}}</span>
+                    {{end}}
 				</td>
 			</tr>
 			
